@@ -1,15 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-def split_dataset(x,y,n):
-    x_train = np.array(x[0:int(np.ceil((1-n)*len(x)))])
-    x_cv = np.array(x[int(np.ceil((1-n)*len(x))):int((0.5*(len(x)+np.ceil((1-n)*len(x)))))])
-    x_test = np.array(x[int((0.5*(len(x)+np.ceil((1-n)*len(x))))):len(x)])
-    y_train = np.array(y[0:int(np.ceil((1-n)*len(x)))])
-    y_cv = np.array(y[int(np.ceil((1-n)*len(x))):int((0.5*(len(x)+np.ceil((1-n)*len(x)))))])
-    y_test = np.array(y[int((0.5*(len(x)+np.ceil((1-n)*len(x))))):len(x)])
-    print("x_train,x_cv,x_test,y_train,y_cv,y_test :",x_train,x_cv,x_test,y_train,y_cv,y_test)
-    return x_train,x_cv,x_test,y_train,y_cv,y_test
+
     
 
 def svlr(x,y,epochs,L):
