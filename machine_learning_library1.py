@@ -1218,6 +1218,12 @@ def predict_linr(X, x_cv, x_train, y_test, y_cv, y_train):
     print("MSE on Validation:", mse1)
     print("MSE on Training:", mse2)
 
+def apply_test(h):
+     h = np.hstack((np.ones((h.shape[0], 1)), h))
+    u = h@m
+    print(u)
+
+
 
 
 
